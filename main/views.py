@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.shortcuts import render
 from unicodedata import category
 
@@ -43,3 +43,11 @@ class CatalogView(ListView):
         context['max_price'] = self.request.GET.get('max_price', '')
 
         return context
+
+
+class ClothingItemDetailView(DetailView):
+    model = ClothingItem
+    template_name = 'main/product/detail.html'
+    context_object_name = 'clothing_item'
+    slug_field = 'slug'
+    slug_url_kwarg = 'slug'
