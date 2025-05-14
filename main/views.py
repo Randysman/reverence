@@ -20,7 +20,7 @@ class CatalogView(ListView):
         max_price = self.request.GET.get('max_price')
 
         if category_slugs:
-            queryset = queryset.filter(category__slugs__in=category_slugs)
+            queryset = queryset.filter(category__slug__in=category_slugs)
 
         if size_names:
             queryset = queryset.filter(Q(sizes__names__in=size_names) & Q(sizes__clothingitemsize__available=True)).distinct()
