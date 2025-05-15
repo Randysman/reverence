@@ -12,15 +12,9 @@
 </head>
 <body>
     <header class="header sticky-top d-flex align-items-center">
-        <div class="header-logo">
+        <a class="header-logo" href="{% url 'main:catalog' %}">
             <img src="{% static 'img/rev.png' %}" alt="">
-        </div>
-        <div class="search">
-            <form action="" id="search_form" class="search_form d-flex" style="display: none;">
-                <input type="text" name="q" class="form_input" placeholder="Search">
-                <button type="submit" class="btnforsearch"></button>
-            </form>
-        </div>
+        </a>
         <div class="header-nav d-flex gap-4">
             <a href="#" class="h-profile">
                 <img src="{% static 'img/profile.png' %}" alt="">
