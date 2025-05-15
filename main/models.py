@@ -1,4 +1,5 @@
 from django.db import models
+from unicodedata import category
 
 
 class Size(models.Model):
@@ -23,6 +24,9 @@ class Category(models.Model):
         indexes = [models.Index(fields=['name'])]
         verbose_name = 'category'
         verbose_name_plural = 'categories'
+
+    def get_item_count(self):
+        return ClothingItem.objects.filter(category=self).count()
 
 
 class ClothingItem(models.Model):
