@@ -1,7 +1,4 @@
 from django.views.generic import ListView, DetailView
-from django.shortcuts import render
-from unicodedata import category
-
 from .models import ClothingItem, Category, Size, ClothingItemSize
 from django.db.models import Q
 
@@ -18,12 +15,14 @@ class CatalogView(ListView):
         size_names = self.request.GET.getlist('size')
         min_price = self.request.GET.get('min_price')
         max_price = self.request.GET.get('max_price')
+        search_query = self.request.GET.get('q')
+
 
         if category_slugs:
             queryset = queryset.filter(category__slug__in=category_slugs)
 
         if size_names:
-            queryset = queryset.filter(Q(sizes__names__in=size_names) & Q(sizes__clothingitemsize__available=True)).distinct()
+            queryset = queryset.filter(Q(sizes__name__in=size_names) & Q(sizes__clothingitemsize__available=True)).distinct()
 
         if min_price:
             queryset = queryset.filter(price__gte=min_price)

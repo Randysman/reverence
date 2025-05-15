@@ -34,7 +34,7 @@ class ClothingItem(models.Model):
     slug = models.SlugField(max_length=255, unique=True)
     available = models.BooleanField(default=True)
     description = models.TextField(blank=True)
-    size = models.ManyToManyField(Size, through='ClothingItemSize', related_name='clothing_item', blank=True)
+    sizes = models.ManyToManyField(Size, through='ClothingItemSize', related_name='clothing_item', blank=True)
     image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, related_name='clothing_items')
     created_at = models.DateTimeField(auto_now_add=True, null=True)

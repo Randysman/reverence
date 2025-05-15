@@ -1,5 +1,3 @@
-from zoneinfo import available_timezones
-
 from django.shortcuts import render, get_object_or_404, redirect
 from .cart import Cart
 from django.views import View
