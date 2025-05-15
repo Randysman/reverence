@@ -1,5 +1,5 @@
 from django.conf import settings
-from ..main.models import ClothingItem
+from main.models import ClothingItem
 
 
 class Cart:
