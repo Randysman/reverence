@@ -43,7 +43,7 @@ def cart_remove(request, item_id):
     return redirect('cart:cart_detail')
 
 
-def CartUpdateView(View):
+class CartUpdateView(View):
     def post(self, request, item_id):
         cart = Cart(request)
         quantity = request.POST.get('quantity', 1)
