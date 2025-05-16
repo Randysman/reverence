@@ -86,13 +86,13 @@ p {
     all: unset;
     border: none;
     background-color: #000;
-    width: 330px;
+    width: 350px;
     padding: 5px 10px;
     border-bottom: 1px solid #fff;
     letter-spacing: 2px;
 }
 
-.form-input, textarea {
+.form_input, textarea {
     color: #fff;
 }
 
@@ -111,7 +111,7 @@ p {
     position: relative;
 }
 
-.search.popup {
+.search-popup {
     position: absolute;
     top: 100%;
     right: 0;
@@ -127,6 +127,12 @@ p {
     flex: 1;
 }
 
+.rev-head {
+    font-size: 27px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
 .sidebar {
     min-width: 260px;
     margin-right: 80px;
@@ -134,29 +140,6 @@ p {
 
 .sidebar h4 {
     font-weight: 600;
-}
-
-.card-container {
-    gap: 30px;
-}
-
-.card {
-    width: 240px;
-    height: 460px;
-    background-color: #000;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.card img {
-    width: 240px;
-    height: 350px;
-}
-
-.rev-head {
-    font-size: 27px;
-    text-align: center;
-    padding-bottom: 40px;
 }
 
 .category-option {
@@ -209,12 +192,7 @@ p {
     margin-bottom: 20px;
 }
 
-.category-head {
-    margin-top: 40px;
-    margin-bottom: 15px;
-}
-
-.size-head {
+.size-head, .category-head {
     margin-top: 40px;
     margin-bottom: 15px;
 }
@@ -242,6 +220,23 @@ input[type="number"]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+.card-container {
+    gap: 30px;
+}
+
+.card {
+    width: 240px;
+    height: 460px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.card img {
+    width: 240px;
+    height: 350px;
+}
+
 .card-info {
     padding-top: 15px;
 }
@@ -258,8 +253,6 @@ input[type="number"]::-webkit-outer-spin-button {
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
-    display: flex;
-    justify-content: space-between;
 }
 
 .prev-btn, .next-btn {
@@ -271,27 +264,27 @@ input[type="number"]::-webkit-outer-spin-button {
     color: #000;
 }
 
+.detail-description {
+    margin: 40px 0 0 20px;
+}
+
 .item-desc {
     font-size: 22px;
     max-width: 700px;
     margin-top: 30px;
 }
 
-.detail-description {
-    margin: 40px 0 0 20px;
+.sizes-list {
+    padding: 0;
 }
 
 .size-name {
     width: 60px;
     height: 40px;
     background-color: #000;
-    border: 1px solid #323232
+    border: 1px solid #323232;
     transition: all .3s ease;
     color: #fff;
-}
-
-sizes-list {
-    padding: 0;
 }
 
 .detail-price {
@@ -342,6 +335,13 @@ sizes-list {
     padding: 40px 0 40px 20px;
 }
 
+.c-quantity-form input {
+    width: 70px;
+    border-bottom: 1px solid #fff;
+    height: 35px;
+    color: #fff;
+}
+
 .c-item-total, .c-item-quantity, .c-item-price {
     width: 120px;
 }
@@ -350,10 +350,59 @@ sizes-list {
     text-align: right;
 }
 
-.c-quantity-form input {
-    width: 70px;
-    border-bottom: 1px solid #fff;
-    height: 35px;
-    color: #fff;
+.block1, .block2 input {
+    width: 250px;
 }
 
+.p-on-order {
+    width: 250px;
+}
+
+.order-item{
+    padding: 10px;
+}
+
+.order {
+    border-bottom: 1px solid #fff;
+    padding: 40px 0 40px 20px;
+}
+
+.block-tag, .profile-btn {
+    width: 250px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.loginform p {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loginform p input {
+    all: unset;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    width: 350px;
+}
+
+.form-group input {
+    all: unset;
+    border-bottom: 1px solid #fff;
+    padding: 10px;
+    width: 350px;
+}
+
+.line {
+    text-decoration: line-through;
+}
+
+.price {
+    font-size: 24px;
+}
+
+.price-on-card {
+    padding-top: 5px;
+}
